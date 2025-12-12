@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"D:/Nlict/11/cm4_stm32/build/cmake_install.cmake",
-		"D:/Nlict/11/cm4_stm32/build/cmake/stm32cubemx/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

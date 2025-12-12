@@ -1,0 +1,10 @@
+forward_controller:
+  ros__parameters:
+    joints:
+      - wheel_0_Joint
+      - wheel_1_Joint
+      - wheel_2_Joint
+      - wheel_3_Joint
+      - mouth_Joint
+      - dribble_Joint
+    interface_name: effort

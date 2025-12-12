@@ -1,0 +1,46 @@
+<package format="2">
+  <name>robot</name>
+  <version>1.0.0</version>
+  <description>
+    <p>URDF Description package for robot</p>
+    <p>This package contains configuration data, 3D models and launch files for robot</p>
+  </description>
+  <maintainer email="3527587187@qq.com">yixi</maintainer>
+  <license>BSD</license>
+
+  <!-- 构建工具 -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- 核心依赖 -->
+  <!-- 1. ROS 2基础依赖 -->
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+
+  <!-- 2. 可视化+状态发布依赖 -->
+  <depend>robot_state_publisher</depend>  <!-- 关节状态发布 -->
+  <depend>joint_state_publisher_gui</depend>  <!-- 独立关节控制GUI -->
+  <depend>rviz2</depend>  <!-- 可视化工具 -->
+
+  <!-- 3. Gazebo Fortress接口依赖 -->
+  <depend>ros_gz_sim</depend>  <!-- ROS 2与Gazebo Fortress的核心接口 -->
+  <depend>ros_gz_sim_gazebo</depend>  <!-- Gazebo Fortress运行时依赖 -->
+  <depend>ros_gz_interfaces</depend>  <!-- Fortress与ROS 2的消息/服务类型 -->
+
+  <!-- 4. ros2_control核心依赖 -->
+  <depend>controller_manager</depend>  <!-- 控制器管理器 -->
+  <depend>forward_command_controller</depend>  <!-- 力控控制器 -->
+  <depend>joint_state_broadcaster</depend>  <!-- 关节状态广播器 -->
+  <depend>hardware_interface</depend>  <!-- ros2_control硬件接口基础包 -->
+  <depend>ros_gz_control</depend>  <!-- Gazebo与ros2_control的桥接插件 -->
+
+  <!-- 测试依赖 -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- 导出构建类型 -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+
